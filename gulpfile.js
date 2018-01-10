@@ -4,12 +4,7 @@ var less = require('gulp-less');
 var less = require('gulp-less-sourcemap');
 var path = require('path');
 var watch = require('gulp-watch');
-
-gulp.task('stream', function () {
-    // Endless stream mode
-    return watch('*.css', { ignoreInitial: false })
-        .pipe(gulp.dest('build'));
-});
+var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('less', function () {
     gulp.src('./less/*.less')
@@ -32,3 +27,10 @@ gulp.task('less', function() {
 gulp.task('default', ['less'], function() {
     gulp.watch('*.less', ['less']);
 })
+
+gulp.task('javascript', function() {
+    gulp.src('*.js')
+      .pipe(sourcemaps.init())
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest('dist'));
+  });
