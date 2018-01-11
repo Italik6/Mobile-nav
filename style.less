@@ -1,13 +1,14 @@
+// basic colors
 @yellow-rizk: #ffe500;
 @dark-gray-rizk: #373737;
 @light-gray-rizk: #9f9f9f;
+@green-rizk: #00a54d;
 body {
     margin: 0;
     padding: 0;
     color: @dark-gray-rizk;
     background: @dark-gray-rizk;
     font-family: 'Roboto', sans-serif;
-   
 }
 
 *,
@@ -20,14 +21,6 @@ body {
     width: 100%;
     position: fixed;
     bottom: 0;
-
-}
-
-.nav-top {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height:60px;
 }
 
 input[name="menu"] {
@@ -154,11 +147,9 @@ input[name="menu"] {
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, .8);
     transition-property: all;
     transition-delay: .2s;
-    transition-duration: .5s;
-    // background-image: url("img/content.png");
+    transition-duration: .5s; // background-image: url("img/content.png");
     // background-size:contain;
 }
-
 
 .drawer-menu {
     box-sizing: border-box;
@@ -192,7 +183,7 @@ input[name="menu"] {
 
 .bar {
     position: absolute;
-    top: 0;
+    top: 1px;
     left: 0;
     display: block;
     width: 23px;
@@ -203,18 +194,18 @@ input[name="menu"] {
 }
 
 .bar.middle {
-    top: 7px;
+    top: 8px;
     opacity: 1;
 }
 
 .bar.bottom {
-    top: 14px;
+    top: 15px;
     transform-origin: left bottom;
 }
 
 .menu-btn__text {
     position: absolute;
-    bottom: 6px;
+    bottom: 5px;
     left: -17px;
     right: 0;
     transition: all .5s;
@@ -235,6 +226,7 @@ input[name="menu"] {
 .menu-btn:hover .menu-btn__text {
     color: @light-gray-rizk;
 }
+
 
 /* checked state */
 
@@ -270,9 +262,10 @@ input[name="menu"] {
     background: rgba(0, 0, 0, .5);
 }
 
-.menu-icon:checked~.contents .wrap .list{
-    visibility:hidden;
-    transition-delay: .4s;
+.menu-icon:checked~.contents .wrap .list {
+    visibility: hidden;
+    transition-delay: .3s;
+    transition-duration: .4s;
 }
 
 .menu-icon:checked~.menu-btn .menu-btn__text {
@@ -289,4 +282,60 @@ input[name="menu"] {
 .menu-icon:checked~.menu-btn .bottom,
 .menu-icon:checked~.menu-btn .top {
     background: @yellow-rizk;
+}
+
+// top navigation
+.nav-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.menu-icon:checked~.contents .list {
+    visibility: hidden;
+    transition-delay: .3s;
+    transition-duration: .4s;
+}
+
+.user-name {
+    color: #fff;
+    font-size: 12px;
+}
+
+.deposit {
+    color: @yellow-rizk;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.flex-nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Deposit button
+.btn-deposit button {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    background: @green-rizk;
+    border: none;
+    display: block;
+    padding: 9px 13px;
+    font-size: 12px;
+    border-radius: 48px;
+    cursor: pointer;
+}
+
+.btn-deposit button:focus {
+    outline: none;
+}
+
+.btn-deposit button:hover {
+    background: #00C147;
+}
+
+.btn-deposit button:active {
+    transform: scale(.95);
 }
