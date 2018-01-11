@@ -150,8 +150,8 @@ input[name="menu"] {
 /* menu button - label tag */
 .menu-btn {
   position: fixed;
-  top: 40px;
-  right: 40px;
+  bottom: 1%;
+  right: 5%;
   display: block;
   width: 40px;
   height: 40px;
@@ -165,9 +165,9 @@ input[name="menu"] {
   top: 0;
   left: 0;
   display: block;
-  width: 25px;
+  width: 23px;
   height: 3px;
-  background: #fff;
+  background: #9f9f9f;
   -webkit-transition: all .5s;
   transition: all .5s;
   -webkit-transform-origin: left top;
@@ -175,27 +175,30 @@ input[name="menu"] {
   transform-origin: left top;
 }
 .bar.middle {
-  top: 10px;
+  top: 7px;
   opacity: 1;
 }
 .bar.bottom {
-  top: 20px;
+  top: 14px;
   -webkit-transform-origin: left bottom;
   -ms-transform-origin: left bottom;
   transform-origin: left bottom;
 }
 .menu-btn__text {
   position: absolute;
-  bottom: -5px;
-  left: 0;
+  bottom: 6px;
+  left: -17px;
   right: 0;
-  margin: auto;
-  color: #fff;
   -webkit-transition: all .5s;
   transition: all .5s;
   display: block;
   visibility: visible;
   opacity: 1;
+  color: #9f9f9f;
+  font-size: 9px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 .menu-btn:hover .bar {
   background: #9f9f9f;
@@ -246,8 +249,8 @@ input[name="menu"] {
   opacity: 0;
 }
 .menu-icon:checked ~ .menu-btn .bar.bottom {
-  width: 25px;
-  top: 18px;
+  width: 24px;
+  top: 17px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -261,5 +264,11 @@ input[name="menu"] {
   visibility: visible;
   opacity: 1;
   z-index: 3;
+}
+.menu-icon:checked ~ .menu-btn .menu-btn__text {
+  left: -22px;
+}
+.hidden-item {
+  visibility: hidden;
 }
 /*# sourceMappingURL=style.css.map */

@@ -19,7 +19,7 @@
 
 <body>
 
-    <input type="radio" class="menu-icon" id="menu" name="menu">
+        <input type="checkbox" class="menu-icon" id="menu" name="menu">
     <label class="menu-btn" for="menu">
         <span class="bar top"></span>
         <span class="bar middle"></span>
@@ -27,27 +27,27 @@
         <span class="menu-btn__text">MENU</span>
     </label>
     <label class="close-menu" for="menu"></label>
-    <nav class="drawer-menu">
+    <!-- <nav class="drawer-menu">
         <ul>
             <li>Content of menu</li>
         </ul>
-    </nav>
+    </nav> -->
     <div class="contents">
-        <div class="contents__inner">
         <div class="wrap">
         <nav class="menu">
-            <input type="radio" name="menu" id="overview" menu>
+            <input type="radio" name="menu" id="overview" checked>
             <input type="radio" name="menu" id="live-bet">
             <input type="radio" name="menu" id="rizk">
             <input type="radio" name="menu" id="my-bets">
-            <input type="radio" name="menu" id="menu">
+      
+            <!-- <input type="checkbox" name="menu" id="menu"> -->
             <div class="list">
                 <div class="overlay">
                     <span class="overlay-overview"></span>
                     <span class="overlay-live-bet"></span>
                     <span class="overlay-rizk"></span>
                     <span class="overlay-my-bets"></span>
-                    <span class="overlay-menu"></span>
+                    <!-- <span class="overlay-menu"></span> -->
                 </div>
                 <div class="link-wrap">
                     <label for="overview">
@@ -65,7 +65,8 @@
                         <i class="fa fa-circle" aria-hidden="true"></i>
                         <span>My bets</span>
                     </label>
-                    <label for="menu">
+                    <!-- hidden element -->
+                    <label for="menu" class="hidden-item">
                         <i class="fa fa-bars" aria-hidden="true"></i>
                         <span>Menu</span>
                     </label>
@@ -73,7 +74,6 @@
             </div>
         </nav>
     </div>
-        </div>
     </div>
     <!-- <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script> -->
     <script src="https://use.fontawesome.com/c26bba1fec.js"></script>
