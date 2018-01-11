@@ -133,6 +133,10 @@ input[name="menu"] {
 }
 
 // Drawer menu
+.hidden-item {
+    visibility: hidden;
+}
+
 .contents {
     display: table;
     width: 100%;
@@ -153,7 +157,7 @@ input[name="menu"] {
     position: fixed;
     top: 0;
     left: 0;
-    width: 79%;
+    width: 80%;
     height: 100%;
     padding: 120px 0;
     background: @light-gray-rizk;
@@ -171,9 +175,6 @@ input[name="menu"] {
     opacity: 0;
 }
 
-
-/* menu button - label tag */
-
 .menu-btn {
     position: fixed;
     display: block;
@@ -182,7 +183,6 @@ input[name="menu"] {
     display: block;
     width: 40px;
     height: 40px;
-    font-size: 10px;
     text-align: center;
     cursor: pointer;
     z-index: 3;
@@ -258,7 +258,7 @@ input[name="menu"] {
 }
 
 
-/* checked */
+/* checked state */
 
 .menu-icon:checked~.drawer-menu {
     -webkit-transition-delay: .3s;
@@ -271,10 +271,10 @@ input[name="menu"] {
 }
 
 .menu-icon:checked~.contents {
-    // -webkit-transition-delay: 0s;
+    -webkit-transition-delay: 0s;
     transition-delay: 0s;
-    // -webkit-transform: translateX(-300px);
-    // -ms-transform: translateX(-300px);
+    -webkit-transform: translateX(80%);
+    -ms-transform: translateX(80%);
     transform: translateX(80%);
 }
 
@@ -308,9 +308,8 @@ input[name="menu"] {
     z-index: 3;
 }
 
-.menu-icon:checked~body{
-//  display:none;
-background:#00;
+.menu-icon:checked~.contents {
+    background: rgba(0, 0, 0, .5);
 }
 
 .menu-icon:checked~.menu-btn .menu-btn__text {
@@ -321,8 +320,4 @@ background:#00;
 .menu-icon:checked~.menu-btn .bottom,
 .menu-icon:checked~.menu-btn .top {
     background: @yellow-rizk;
-}
-
-.hidden-item {
-    visibility: hidden;
 }
