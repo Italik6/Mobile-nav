@@ -18,7 +18,23 @@
 </head>
 
 <body>
-    <div class="wrap">
+
+    <input type="checkbox" class="check" id="checked">
+    <label class="menu-btn" for="checked">
+        <span class="bar top"></span>
+        <span class="bar middle"></span>
+        <span class="bar bottom"></span>
+        <span class="menu-btn__text">MENU</span>
+    </label>
+    <label class="close-menu" for="checked"></label>
+    <nav class="drawer-menu">
+        <ul>
+            <li>Content of menu</li>
+        </ul>
+    </nav>
+    <div class="contents">
+        <div class="contents__inner">
+        <div class="wrap">
         <nav class="menu">
             <input type="radio" name="menu" id="overview" checked>
             <input type="radio" name="menu" id="live-bet">
@@ -56,6 +72,8 @@
                 </div>
             </div>
         </nav>
+    </div>
+        </div>
     </div>
     <!-- <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script> -->
     <script src="https://use.fontawesome.com/c26bba1fec.js"></script>

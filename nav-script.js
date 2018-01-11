@@ -1,8 +1,8 @@
-let clickMenu = document.getElementById("menu");
-debugger
-console.log(clickMenu.checked)
+// let clickMenu = document.getElementById("menu");
 
-if(clickMenu.checked){
+// console.log(clickMenu.checked)
+
+// if(clickMenu.checked){
     
-    alert('weszet')
-}
+//     alert('weszet')
+// }
