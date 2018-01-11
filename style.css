@@ -11,9 +11,15 @@ body {
   box-sizing: border-box;
 }
 .wrap {
+  width: 100%;
   position: fixed;
   bottom: 0;
+}
+.nav-top {
+  position: fixed;
+  top: 0;
   width: 100%;
+  height: 60px;
 }
 input[name="menu"] {
   display: none;
@@ -121,11 +127,8 @@ input[name="menu"] {
   padding: 0;
   margin: 0;
   box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.8);
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-delay: .3s;
-  transition-delay: .3s;
-  -webkit-transition-duration: .5s;
+  transition-delay: .2s;
   transition-duration: .5s;
 }
 .drawer-menu {
@@ -133,20 +136,14 @@ input[name="menu"] {
   position: fixed;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 85%;
   height: 100%;
   padding: 120px 0;
   background: #9f9f9f;
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: .5s;
-  transition-duration: .5s;
-  -webkit-transition-delay: 0s;
+  transition-duration: .4s;
   transition-delay: 0s;
-  -webkit-transform-origin: left center;
-  -ms-transform-origin: left center;
   transform-origin: left center;
-  -webkit-transform: perspective(500px) rotateY(90deg);
   transform: perspective(500px) rotateY(90deg);
   opacity: 0;
 }
@@ -169,10 +166,7 @@ input[name="menu"] {
   width: 23px;
   height: 3px;
   background: #9f9f9f;
-  -webkit-transition: all .5s;
   transition: all .5s;
-  -webkit-transform-origin: left top;
-  -ms-transform-origin: left top;
   transform-origin: left top;
 }
 .bar.middle {
@@ -181,8 +175,6 @@ input[name="menu"] {
 }
 .bar.bottom {
   top: 14px;
-  -webkit-transform-origin: left bottom;
-  -ms-transform-origin: left bottom;
   transform-origin: left bottom;
 }
 .menu-btn__text {
@@ -190,7 +182,6 @@ input[name="menu"] {
   bottom: 6px;
   left: -17px;
   right: 0;
-  -webkit-transition: all .5s;
   transition: all .5s;
   display: block;
   visibility: visible;
@@ -207,43 +198,20 @@ input[name="menu"] {
 .menu-btn:hover .menu-btn__text {
   color: #9f9f9f;
 }
-.close-menu {
-  position: fixed;
-  top: 0;
-  right: 300px;
-  width: -80%;
-  height: 100vh;
-  background: #000;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: .3s;
-  transition-duration: .3s;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-  visibility: hidden;
-  opacity: 0;
-}
 /* checked state */
 .menu-icon:checked ~ .drawer-menu {
-  -webkit-transition-delay: .3s;
-  transition-delay: .3s;
-  -webkit-transform: none;
-  -ms-transform: none;
+  transition-delay: .6s;
+  transition-duration: .5s;
   transform: none;
   opacity: 1;
   z-index: 2;
 }
 .menu-icon:checked ~ .contents {
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-  -webkit-transform: translateX(80%);
-  -ms-transform: translateX(80%);
-  transform: translateX(80%);
+  transition-delay: .4s;
+  transform: translateX(85%);
 }
 .menu-icon:checked ~ .menu-btn .bar.top {
   width: 25px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 .menu-icon:checked ~ .menu-btn .bar.middle {
@@ -252,26 +220,23 @@ input[name="menu"] {
 .menu-icon:checked ~ .menu-btn .bar.bottom {
   width: 24px;
   top: 17px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
-}
-.menu-icon:checked ~ .close-menu {
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
-  -webkit-transition-delay: .3s;
-  transition-delay: .3s;
-  background: rgba(0, 0, 0, 0.5);
-  visibility: visible;
-  opacity: 1;
-  z-index: 3;
 }
 .menu-icon:checked ~ .contents {
   background: rgba(0, 0, 0, 0.5);
 }
+.menu-icon:checked ~ .contents .wrap .list {
+  visibility: hidden;
+  transition-delay: .4s;
+}
 .menu-icon:checked ~ .menu-btn .menu-btn__text {
   left: -22px;
   color: #ffe500;
+}
+.menu-icon:checked ~ .menu-btn {
+  transition-delay: .4s;
+  transition-duration: .5s;
+  right: 0;
 }
 .menu-icon:checked ~ .menu-btn .bottom,
 .menu-icon:checked ~ .menu-btn .top {
