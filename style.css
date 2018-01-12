@@ -126,6 +126,7 @@ input[name="menu"] {
   transition-duration: .5s;
 }
 .drawer-menu {
+  overflow: scroll;
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -314,7 +315,7 @@ ul {
 .dropdownlink {
   cursor: pointer;
   display: block;
-  padding: 15px 15px 15px 45px;
+  padding: 14px 15px 14px 45px;
   font-size: 15px;
   border-bottom: 2.5px solid #181818;
   color: #9f9f9f;
@@ -324,8 +325,8 @@ ul {
 }
 .dropdownlink i {
   position: absolute;
-  top: 17px;
-  left: 16px;
+  top: 16px;
+  left: 23px;
 }
 .dropdownlink .fa-chevron-down {
   right: 12px;
@@ -339,17 +340,24 @@ ul {
 }
 .submenuItems li {
   border-bottom: 1px solid #232323;
-  padding: 12px 0;
   font-size: 13px;
   cursor: pointer;
-  margin-left: 30px;
 }
 .submenuItems span {
   display: block;
-  padding: 8px 8px 8px 25px;
   transition: all 0.4s ease-out;
+  padding: 14px 0px 14px 33px;
 }
 .submenuItems span:hover {
   background-color: #212121;
+}
+.submenuItems li:hover {
+  background-color: #212121;
+  border-bottom: 1px solid #9f9f9f;
+  transition-delay: .1s;
+  transition-duration: .3s;
+}
+.dropdownlink:hover {
+  background-color: #373737;
 }
 /*# sourceMappingURL=style.css.map */
