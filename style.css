@@ -33,11 +33,11 @@ input[name="menu"] {
 }
 .list .link-wrap > label {
   color: #9f9f9f;
-  z-index: 999;
+  z-index: 99;
   width: 100px;
   font-size: 9px;
   cursor: pointer;
-  padding: 4px 12px;
+  padding: 4px 10px;
   text-align: center;
   position: relative;
   display: table-cell;
@@ -143,7 +143,7 @@ input[name="menu"] {
 }
 .menu-btn {
   position: fixed;
-  bottom: 1%;
+  bottom: 0.95%;
   right: 5%;
   display: block;
   width: 40px;
@@ -192,7 +192,7 @@ input[name="menu"] {
 .menu-btn:hover .menu-btn__text {
   color: #9f9f9f;
 }
-/* checked state */
+/* Checked state */
 .menu-icon:checked ~ .drawer-menu {
   transition-delay: .6s;
   transition-duration: .5s;
@@ -217,7 +217,7 @@ input[name="menu"] {
   transform: rotate(-45deg);
 }
 .menu-icon:checked ~ .contents {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
 }
 .menu-icon:checked ~ .contents .wrap .list {
   visibility: hidden;
@@ -248,22 +248,26 @@ input[name="menu"] {
   transition-duration: .4s;
 }
 .user-name {
-  color: #fff;
+  color: #fdfbfb;
   font-size: 12px;
 }
 .deposit {
   color: #ffe500;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 900;
+  margin-right: 8px;
 }
 .flex-nav-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.flex-nav-top .user-name {
+  margin-left: 6px;
+}
 .btn-deposit button {
   text-transform: uppercase;
-  color: #fff;
+  color: #fdfbfb;
   font-weight: 900;
   background: #00a54d;
   border: none;
@@ -272,6 +276,7 @@ input[name="menu"] {
   font-size: 12px;
   border-radius: 48px;
   cursor: pointer;
+  margin-right: 7px;
 }
 .btn-deposit button:focus {
   outline: none;
@@ -284,15 +289,19 @@ input[name="menu"] {
 }
 .list-drawer-menu .btn-deposit button {
   margin: 0 auto;
-  padding: 13px 70px;
+  padding: 10px 69px;
   font-size: 16px;
 }
 .list-drawer-menu {
   margin: 0 auto;
   text-align: center;
 }
+.list-drawer-menu .user-name {
+  margin-top: 8px;
+}
 .list-drawer-menu .deposit {
-  font-size: 36px;
+  font-size: 30px;
+  margin: 12px 0px;
 }
 ul {
   list-style: none;
@@ -316,7 +325,7 @@ ul {
   cursor: pointer;
   display: block;
   padding: 14px 15px 14px 45px;
-  font-size: 15px;
+  font-size: 13px;
   border-bottom: 2.5px solid #181818;
   color: #9f9f9f;
   position: relative;
@@ -325,7 +334,7 @@ ul {
 }
 .dropdownlink i {
   position: absolute;
-  top: 16px;
+  top: 14.5px;
   left: 23px;
 }
 .dropdownlink .fa-chevron-down {
@@ -348,6 +357,9 @@ ul {
   transition: all 0.4s ease-out;
   padding: 14px 0px 14px 33px;
 }
+.submenuItems span i {
+  margin-right: 5px;
+}
 .submenuItems span:hover {
   background-color: #212121;
 }
@@ -359,5 +371,37 @@ ul {
 }
 .dropdownlink:hover {
   background-color: #373737;
+}
+.close-label {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  cursor: pointer;
+}
+.close {
+  position: absolute;
+  right: 4px;
+  top: 5px;
+  width: 30px;
+  opacity: 0.7;
+  transition-duration: .2s;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 21px;
+  width: 2px;
+  background-color: #9f9f9f;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
 }
 /*# sourceMappingURL=style.css.map */

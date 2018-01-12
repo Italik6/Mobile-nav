@@ -18,7 +18,6 @@
 </head>
 
 <body>
-
     <input type="checkbox" class="menu-icon" id="menu" name="menu">
     <label class="menu-btn" for="menu">
         <span class="bar top"></span>
@@ -26,16 +25,19 @@
         <span class="bar bottom"></span>
         <span class="menu-btn__text">MENU</span>
     </label>
+    <!-- Drawer menu -->
     <nav class="drawer-menu">
         <nav class="menu">
             <div class="list-drawer-menu">
+                <label class="close-label menu-btn" for="menu">
+                    <span class="close"></span>
+                </label>
                 <br/>
                 <div class="user-name">
                     Rene Random Name
                     <br/>
                     <b>Level 375</b>
                 </div>
-                <br/>
                 <div class="deposit">
                     €17,465.30
                 </div>
@@ -48,7 +50,7 @@
         <ul class="accordion-menu">
             <li>
                 <div class="dropdownlink">
-                    <i class="fa fa-circle" aria-hidden="true"></i> Casino
+                    <i class="fa fa-calculator" aria-hidden="true"></i> Casino
                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
                 </div>
                 <ul class="submenuItems">
@@ -112,7 +114,7 @@
                     </li>
                     <li>
                         <span>
-                            <i class="fa fa-space-shuttle" aria-hidden="true"></i>
+                            <i class="fa fa-life-bouy" aria-hidden="true"></i>
                             Hockey</span>
                     </li>
                     <li>
@@ -129,7 +131,7 @@
             </li>
             <li>
                 <div class="dropdownlink">
-                    <i class="fa fa-circle" aria-hidden="true"></i> Live Casino
+                    <i class="fa fa-calculator" aria-hidden="true"></i> Live Casino
                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
                 </div>
                 <ul class="submenuItems">
@@ -145,14 +147,14 @@
                     </li>
                     <li>
                         <span>
-                            <i class="fa fa-space-shuttle" aria-hidden="true"></i>
+                            <i class="fa fa-life-bouy" aria-hidden="true"></i>
                             Hockey</span>
                     </li>
                 </ul>
             </li>
             <li>
                 <div class="dropdownlink">
-                    <i class="fa fa-circle" aria-hidden="true"></i> Poker
+                    <i class="fa fa-certificate" aria-hidden="true"></i> Poker
                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
                 </div>
                 <ul class="submenuItems">
@@ -233,9 +235,9 @@
             </nav>
         </div>
     </div>
+
     <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
     <script src="https://use.fontawesome.com/c26bba1fec.js"></script>
-    <!-- <script type="text/javascript" src="nav-script.js"></script> -->
     <script>
         (function () {
             var Accordion = function (el) {
@@ -245,7 +247,6 @@
                     el: this.el
                 }, this.dropdown);
             };
-
             Accordion.prototype.dropdown = function (e) {
                 var $el = e.data.el,
                     $this = $(this),
