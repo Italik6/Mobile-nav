@@ -16,7 +16,8 @@ body {
 *,
 :after,
 :before {
-    box-sizing: border-box
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box
 }
 
 .wrap {
@@ -60,6 +61,7 @@ input[name="menu"] {
 
 .list .link-wrap>label>i,
 .list .link-wrap>label>span {
+    -webkit-transition: all .2s ease-in-out 0s;
     transition: all .2s ease-in-out 0s;
 }
 
@@ -100,7 +102,8 @@ input[name="menu"] {
 #my-bets:checked~.list label[for="my-bets"]>span,
 #menu:checked~.list label[for="menu"]>span,
 #rizk:checked~.list label[for="rizk"]>span {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     height: auto;
     color: @yellow-rizk;
 }
@@ -110,7 +113,8 @@ input[name="menu"] {
 #my-bets:checked~.list label[for="my-bets"]>i,
 #menu:checked~.list label[for="menu"]>i,
 #rizk:checked~.list label[for="rizk"]>i {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     height: auto;
     color: @yellow-rizk;
 }
@@ -120,7 +124,8 @@ input[name="menu"] {
 #my-bets:hover~.list label[for="my-bets"]>i,
 #menu:hover~.list label[for="menu"]>i,
 #rizk:hover~.list label[for="rizk"]>i {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     height: auto;
     color: @yellow-rizk;
 }
@@ -130,7 +135,8 @@ input[name="menu"] {
 #my-bets:hover~.list label[for="my-bets"]>span,
 #menu:hover~.list label[for="menu"]>span,
 #rizk:hover~.list label[for="rizk"]>span {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     height: auto;
     color: @yellow-rizk;
 }
@@ -146,26 +152,36 @@ input[name="menu"] {
     height: 100vh;
     padding: 0;
     margin: 0;
-    box-shadow: 0 0 50px 0 rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, .8);
+            box-shadow: 0 0 50px 0 rgba(0, 0, 0, .8);
+    -webkit-transition-property: all;
     transition-property: all;
-    transition-delay: .2s;
-    transition-duration: .5s;
+    -webkit-transition-delay: .2s;
+            transition-delay: .2s;
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
 }
 
 .drawer-menu {
     overflow: scroll;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     position: fixed;
     top: 0;
     left: 0;
     width: 85%;
     height: 100%;
     background: #181818;
+    -webkit-transition-property: all;
     transition-property: all;
-    transition-duration: .4s;
-    transition-delay: 0s;
-    transform-origin: left center;
-    transform: perspective(500px) rotateY(90deg);
+    -webkit-transition-duration: .4s;
+            transition-duration: .4s;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
+    -webkit-transform: perspective(500px) rotateY(90deg);
+            transform: perspective(500px) rotateY(90deg);
     opacity: 0;
 }
 
@@ -190,8 +206,10 @@ input[name="menu"] {
     width: 23px;
     height: 3px;
     background: @light-gray-rizk;
+    -webkit-transition: all .5s;
     transition: all .5s;
-    transform-origin: left top;
+    -webkit-transform-origin: left top;
+            transform-origin: left top;
 }
 
 .bar.middle {
@@ -201,7 +219,8 @@ input[name="menu"] {
 
 .bar.bottom {
     top: 15px;
-    transform-origin: left bottom;
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
 }
 
 .menu-btn__text {
@@ -209,6 +228,7 @@ input[name="menu"] {
     bottom: 5px;
     left: -17px;
     right: 0;
+    -webkit-transition: all .5s;
     transition: all .5s;
     display: block;
     visibility: visible;
@@ -232,21 +252,27 @@ input[name="menu"] {
 /* Checked state */
 
 .menu-icon:checked~.drawer-menu {
-    transition-delay: .6s;
-    transition-duration: .5s;
-    transform: none;
+    -webkit-transition-delay: .6s;
+            transition-delay: .6s;
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+    -webkit-transform: none;
+            transform: none;
     opacity: 1;
     z-index: 2;
 }
 
 .menu-icon:checked~.contents {
-    transition-delay: .4s;
-    transform: translateX(85%);
+    -webkit-transition-delay: .4s;
+            transition-delay: .4s;
+    -webkit-transform: translateX(85%);
+            transform: translateX(85%);
 }
 
 .menu-icon:checked~.menu-btn .bar.top {
     width: 25px;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 .menu-icon:checked~.menu-btn .bar.middle {
@@ -256,7 +282,8 @@ input[name="menu"] {
 .menu-icon:checked~.menu-btn .bar.bottom {
     width: 24px;
     top: 17px;
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
 
 .menu-icon:checked~.contents {
@@ -265,8 +292,10 @@ input[name="menu"] {
 
 .menu-icon:checked~.contents .wrap .list {
     visibility: hidden;
-    transition-delay: .3s;
-    transition-duration: .4s;
+    -webkit-transition-delay: .3s;
+            transition-delay: .3s;
+    -webkit-transition-duration: .4s;
+            transition-duration: .4s;
 }
 
 .menu-icon:checked~.menu-btn .menu-btn__text {
@@ -275,8 +304,10 @@ input[name="menu"] {
 }
 
 .menu-icon:checked~.menu-btn {
-    transition-delay: .4s;
-    transition-duration: .5s;
+    -webkit-transition-delay: .4s;
+            transition-delay: .4s;
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
     right: 0;
 }
 
@@ -294,8 +325,10 @@ input[name="menu"] {
 
 .menu-icon:checked~.contents .list {
     visibility: hidden;
-    transition-delay: .3s;
-    transition-duration: .4s;
+    -webkit-transition-delay: .3s;
+            transition-delay: .3s;
+    -webkit-transition-duration: .4s;
+            transition-duration: .4s;
 }
 
 .user-name {
@@ -311,9 +344,15 @@ input[name="menu"] {
 }
 
 .flex-nav-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     .user-name {
         margin-left: 6px;
     }
@@ -343,7 +382,8 @@ input[name="menu"] {
 }
 
 .btn-deposit button:active {
-    transform: scale(.95);
+    -webkit-transform: scale(.95);
+            transform: scale(.95);
 }
 
 .list-drawer-menu .btn-deposit button {
@@ -382,7 +422,8 @@ ul {
 }
 
 .accordion-menu li.open .dropdownlink .fa-chevron-down {
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
 }
 
 .accordion-menu li:last-child .dropdownlink {
@@ -397,6 +438,7 @@ ul {
     border-bottom: 2.5px solid #181818;
     color: @light-gray-rizk;
     position: relative;
+    -webkit-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
     background: @gray-rizk;
 }
@@ -427,6 +469,7 @@ ul {
 
 .submenuItems span {
     display: block;
+    -webkit-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
     padding: 14px 0px 14px 33px;
     i {
@@ -441,8 +484,10 @@ ul {
 .submenuItems li:hover {
     background-color: @gray-rizk;
     border-bottom: 1px solid @light-gray-rizk;
-    transition-delay: .1s;
-    transition-duration: .3s;
+    -webkit-transition-delay: .1s;
+            transition-delay: .1s;
+    -webkit-transition-duration: .3s;
+            transition-duration: .3s;
 }
 
 .dropdownlink:hover {
@@ -462,7 +507,8 @@ ul {
     top: 5px;
     width: 30px;
     opacity: 0.7;
-    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+            transition-duration: .2s;
 }
 
 .close:hover {
@@ -480,9 +526,11 @@ ul {
 }
 
 .close:before {
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 .close:after {
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
